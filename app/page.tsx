@@ -73,6 +73,7 @@ export default function Home() {
     "spatial" | "verbal" | "working" | "inferential"
   >("spatial");
   const [hasCopiedBibtex, setHasCopiedBibtex] = useState(false);
+  const [openDeepDive, setOpenDeepDive] = useState<string | null>(null);
 
   const handleCopyBibtex = async () => {
     try {
@@ -101,7 +102,7 @@ export default function Home() {
               CHI 2026 • Barcelona, Spain • April 13-17, 2026
             </span>
           </div>
-          <h1 className="text-3xl font-semibold tracking-tight text-gray-900">
+          <h1 className="text-3xl font-medium tracking-tight text-gray-900">
             ``I Can&apos;t Keep Up'': Accessibility Barriers in Video-Based
             Learning for <br />
             Individuals with Borderline Intellectual Functioning
@@ -177,7 +178,7 @@ export default function Home() {
           <div className="flex items-center justify-center mt-12 gap-x-6">
             <a
               href="https://arxiv.org/abs/2602.08300"
-              className="flex items-center gap-2 rounded-md bg-[#319AE0] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#2a86c9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#319AE0] transition-colors"
+              className="flex items-center gap-2 rounded-xl bg-[#319AE0] px-6 py-3 text-sm font-light text-white shadow-md hover:shadow-lg hover:bg-[#2a86c9] transform hover:-translate-y-0.5 transition-all border-2 border-dashed border-blue-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -188,11 +189,11 @@ export default function Home() {
                 height={20}
                 className="w-5 h-5 object-contain"
               />
-              Preprint
+              Read Paper
             </a>
             <a
               href="#bibtex"
-              className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors"
+              className="rounded-xl bg-white px-6 py-3 text-sm font-light text-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all border-2 border-dashed border-gray-400"
             >
               Cite (BibTeX)
             </a>
@@ -200,14 +201,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
       {/* Abstract Section */}
       <section
         id="abstract"
-        className="px-6 py-16 mx-auto max-w-5xl lg:px-8 bg-gray-50"
+        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
       >
-        <div className="overflow-hidden bg-white shadow-lg rounded-2xl">
+        <div className="overflow-hidden bg-white shadow-lg rounded-2xl border-2 border-dashed border-gray-300">
           <div className="px-8 py-12">
-            <h2 className="text-3xl font-bold text-gray-900">Abstract</h2>
+            <h2 className="text-3xl font-medium text-gray-900">Abstract</h2>
             <div className="mt-6 space-y-4 text-lg leading-8 text-gray-700">
               <p>
                 Video-based learning (VBL) has become a dominant method for
@@ -243,12 +253,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
       {/* Methodology Section */}
       <section
         id="methodology"
-        className="px-6 py-16 mx-auto max-w-5xl lg:px-8"
+        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl font-medium text-center text-gray-900">
           Methodology
         </h2>
         <p className="mt-4 text-lg text-center text-gray-600">
@@ -257,12 +276,12 @@ export default function Home() {
 
         <div className="grid gap-8 mt-12 md:grid-cols-2">
           {/* Study 1 */}
-          <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div className="p-8 bg-white border-2 border-dashed border-[#4B8857]/30 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
-              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#4B8857] rounded-lg">
+              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#4B8857] rounded-lg shadow-md transform rotate-2">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="ml-4 text-xl font-semibold text-gray-900">
+              <h3 className="ml-4 text-xl font-medium text-gray-900">
                 Interviews with Caregivers
               </h3>
             </div>
@@ -283,12 +302,12 @@ export default function Home() {
           </div>
 
           {/* Study 2 */}
-          <div className="p-8 bg-white border border-gray-200 rounded-xl shadow-sm">
+          <div className="p-8 bg-white border-2 border-dashed border-[#319AE0]/30 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
-              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#319AE0] rounded-lg">
+              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#319AE0] rounded-lg shadow-md transform -rotate-1">
                 <span className="text-xl font-bold">2</span>
               </div>
-              <h3 className="ml-4 text-xl font-semibold text-gray-900">
+              <h3 className="ml-4 text-xl font-medium text-gray-900">
                 Study with BIF Users
               </h3>
             </div>
@@ -311,7 +330,7 @@ export default function Home() {
 
         {/* Methodology Image */}
         <div className="mt-12">
-          <div className="overflow-hidden bg-white shadow-lg rounded-xl">
+          <div className="overflow-hidden bg-white shadow-lg rounded-xl border-2 border-dashed border-gray-300">
             <Image
               src="/images/Methodology.png"
               alt="Study Methodology"
@@ -323,46 +342,245 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Findings Section - Restructured */}
+      {/* Decorative Divider */}
+      <div className="relative py-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* Key Findings Section - Journey-Based */}
       <section
         id="findings"
-        className="px-6 py-16 mx-auto max-w-7xl lg:px-8 bg-gray-50"
+        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl font-medium text-center text-gray-900">
           Key Findings
         </h2>
         <p className="mt-4 text-lg text-center text-gray-600">
-          Understanding video-based learning challenges for BIF individuals
+          The learning journey: Understanding accessibility barriers step by
+          step
+        </p>
+        <p className="mt-2 text-base text-center text-gray-500 italic">
+          This journey represents a composite scenario synthesized from observations of multiple BIF individuals
         </p>
 
-        {/* RQ1: Misalignment */}
-        <div className="mt-16">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-gray-900">
-              RQ1. Challenges from Cognitive-Video Misalignment
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Misalignment between user cognitive characteristics and video
-              elements
-            </p>
+        {/* Background Section - 2 Column Grid */}
+        <div className="mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden border-2 border-dashed border-[#319AE0]/30">
+            {/* Image - Left */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-8">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
+                  <svg
+                    className="w-16 h-16 mx-auto mb-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p className="text-sm font-medium">
+                    Person with tablet in dimly lit room
+                  </p>
+                  <p className="text-xs mt-1">Aspect Ratio: 4:3</p>
+                </div>
+              </div>
+            </div>
+            {/* Content - Right */}
+            <div className="px-8 py-10">
+              <div className="flex items-center mb-4">
+                <span className="text-2xl mr-3">🛡️</span>
+                <h3 className="text-2xl font-medium text-gray-900">
+                  Background: The Retreat to Video as a Social Refuge
+                </h3>
+              </div>
+              <p className="text-base leading-7 text-gray-700 mb-6">
+                For individuals with Borderline Intellectual Functioning (BIF),
+                the real world often moves too fast. They exist in a &apos;gray
+                area,&apos; cognitively different enough to struggle in
+                neurotypical settings but excluded from specialized support
+                systems reserved for diagnosed disabilities. BIF users often
+                retreat to video-based learning (VBL) as a refuge to escape the
+                social anxiety and pressure of face-to-face learning
+                environments.
+              </p>
+              <blockquote className="border-l-4 border-[#319AE0] pl-4 py-2 bg-blue-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;There aren&apos;t many people who can wait for
+                  us.&quot;
+                </p>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        {/* Journey Steps */}
+        <div className="mt-12 space-y-8">
+          <h3 className="text-2xl font-medium text-center text-gray-900 mb-8">
+            The Learning Journey: Seven Accessibility Barriers
+          </h3>
+
+          {/* Step 1: Common Sense Language - Content Left, Image Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#4B8857]/30">
+            {/* Content - Left */}
+            <div className="px-8 py-8">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#4B8857] text-white rounded-lg font-bold text-xl shadow-md transform rotate-1">
+                  1
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-xl font-medium text-gray-900">
+                    The Barrier of &apos;Common Sense&apos; Language
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1 font-light">
+                    Verbal Comprehension Misalignment
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                What content creators perceive as entry-level &apos;common
+                sense&apos; vocabulary often functions as technical jargon for
+                BIF learners. This fundamental mismatch between concrete
+                thinking patterns and abstract language creates immediate
+                comprehension barriers.
+              </p>
+              <blockquote className="border-l-4 border-[#4B8857] pl-4 py-2 bg-green-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;During safety training, there were too many unfamiliar
+                  words... medical terms... like airway intubation...&quot;
+                </p>
+              </blockquote>
+            </div>
+            {/* Image - Right */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-8">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
+                  <svg
+                    className="w-16 h-16 mx-auto mb-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p className="text-sm font-medium">
+                    Words forming a wall barrier
+                  </p>
+                  <p className="text-xs mt-1">4:3</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
-            {/* Spatial Perception */}
-            <button
-              type="button"
-              onClick={() => setActiveMisalignment("spatial")}
-              className={`p-6 w-full text-left transition-shadow bg-white rounded-xl hover:shadow-lg border ${
-                activeMisalignment === "spatial"
-                  ? "border-[#319AE0] ring-2 ring-[#319AE0]"
-                  : "border-gray-200"
-              }`}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-10 h-10 text-white bg-[#4B8857] rounded-lg">
+          {/* Step 2: Video Racing Ahead - Image Left, Content Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#319AE0]/30">
+            {/* Image - Left */}
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-8 md:order-1">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
+                  <svg
+                    className="w-16 h-16 mx-auto mb-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p className="text-sm font-medium">
+                    Clock spinning, speech bubbles piling
+                  </p>
+                  <p className="text-xs mt-1">4:3</p>
+                </div>
+              </div>
+            </div>
+            {/* Content - Right */}
+            <div className="px-8 py-8 md:order-2">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#319AE0] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-1">
+                  2
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-xl font-medium text-gray-900">
+                    &apos;The Video is Racing Ahead of Me&apos;
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1 font-light">
+                    Working Memory Constraints - Rapid Pacing & Density
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Information density spikes, such as rapid turn-taking with
+                pauses under 0.5 seconds, create severe working memory overload.
+                BIF users struggle to process and retain content when the video
+                pace exceeds their processing capacity.
+              </p>
+              <blockquote className="border-l-4 border-[#319AE0] pl-4 py-2 bg-blue-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;It is definitely a bit complicated. I don&apos;t
+                  remember, the video went by too quickly.&quot;
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Step 3: Multi-modal Anchor - Content Left, Image Right */}
+          <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#A6A62A]/30">
+              {/* Content - Left */}
+              <div className="px-8 py-8">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-[#A6A62A] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-2">
+                    3
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-xl font-medium text-gray-900">
+                      The Multi-modal Anchor
+                    </h4>
+                    <p className="text-sm text-gray-600 mt-1 font-light">
+                      Working Memory Constraints - Single vs. Audio-Caption
+                      Delivery
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Content presented through only one modality (audio-only or
+                  visual-only) often fails to be processed. However, when audio is
+                  paired with visual anchors like captions, comprehension improves
+                  dramatically as the redundant channels reduce cognitive load.
+                </p>
+                <blockquote className="border-l-4 border-[#A6A62A] pl-4 py-2 bg-yellow-50 rounded-r">
+                  <p className="text-base italic text-gray-700">
+                    &quot;I didn&apos;t hear it... I thought the sound from the
+                    machine was the narrator&apos;s voice. It was subtitles... I
+                    feel like I need something like a caption or a highlight to
+                    emphasize that &apos;this is important right now&apos;.&quot;
+                  </p>
+                </blockquote>
+              </div>
+              {/* Image - Right */}
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 flex items-center justify-center p-8">
+                <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                  <div className="text-center text-gray-500">
                     <svg
-                      className="w-6 h-6"
+                      className="w-16 h-16 mx-auto mb-2"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -371,338 +589,208 @@ export default function Home() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                       />
                     </svg>
+                    <p className="text-sm font-medium">
+                      Speaker icon with/without captions
+                    </p>
+                    <p className="text-xs mt-1">4:3</p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Deep Dive 1: Uneven Abilities - Below Step 3 */}
+            <div className="mt-8">
+              <div className="bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 rounded-2xl overflow-hidden border-2 border-amber-200 shadow-lg">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenDeepDive(
+                      openDeepDive === "uneven" ? null : "uneven"
+                    )
+                  }
+                  className="w-full px-6 py-6 flex items-center justify-between hover:bg-amber-100/50 transition-all group"
+                >
+                  <div className="flex items-center">
+                    <div className="relative">
+                      <span className="text-3xl mr-8 animate-pulse">💡</span>
+                      <svg className="absolute -top-1 -right-1 w-6 h-6 text-amber-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-lg font-bold text-amber-900">
+                        🔘 WHY IS THIS HAPPENING?
+                      </h4>
+                      <p className="text-base font-medium text-amber-800 mt-1">
+                        The Trap of Uneven Abilities
+                      </p>
+                      <p className="text-sm text-amber-600 mt-1">
+                        {openDeepDive === "uneven" ? "Click to close" : "Click to explore →"}
+                      </p>
+                    </div>
+                  </div>
+                  <svg
+                    className={`w-8 h-8 text-amber-600 transition-transform duration-300 group-hover:scale-110 ${
+                      openDeepDive === "uneven" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                {openDeepDive === "uneven" && (
+                  <div className="bg-white/80 border-t-2 border-amber-200">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                      {/* Image placeholder */}
+                      <div className="bg-gradient-to-br from-amber-50 to-yellow-50 flex items-center justify-center p-6 rounded-lg">
+                        <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                          <div className="text-center text-gray-500">
+                            <svg
+                              className="w-12 h-12 mx-auto mb-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                              />
+                            </svg>
+                            <p className="text-xs font-medium">Jagged profile visualization</p>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Content */}
+                      <div className="flex flex-col justify-center">
+                        <p className="text-gray-700 leading-relaxed text-base">
+                          BIF individuals often have a &apos;jagged cognitive
+                          profile&apos; with significant intra-individual variance.
+                          For example, they may perform &apos;above normal&apos; in
+                          humanities while struggling deeply with spatial or numerical
+                          tasks. This inconsistency often leads observers to
+                          misinterpret their genuine struggles as a lack of effort.
+                        </p>
+                        <div className="mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
+                          <p className="text-sm text-amber-800 italic">
+                            💭 This creates a paradox: their visible competence in some areas
+                            makes their invisible struggles in others seem like &quot;not trying hard enough.&quot;
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Step 4: 3D Puzzle - Image Left, Content Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#3d7048]/30">
+            {/* Image - Left */}
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center p-8 md:order-1">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
+                  <svg
+                    className="w-16 h-16 mx-auto mb-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  <p className="text-sm font-medium">
+                    2D paper on 3D mannequin confusion
+                  </p>
+                  <p className="text-xs mt-1">4:3</p>
+                </div>
+              </div>
+            </div>
+            {/* Content - Right */}
+            <div className="px-8 py-8 md:order-2">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#3d7048] text-white rounded-lg font-bold text-xl shadow-md transform rotate-2">
+                  4
+                </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">
+                  <h4 className="text-xl font-medium text-gray-900">
+                    The 3D Puzzle on a 2D Screen
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1 font-light">
                     Spatial Perception Misalignment
-                  </h4>
-                  <p className="mt-2 text-gray-600">
-                    Difficulty translating 2D video demonstrations into 3D
-                    physical actions, especially with rotated camera angles
                   </p>
                 </div>
               </div>
-            </button>
-
-            {/* Verbal Comprehension */}
-            <button
-              type="button"
-              onClick={() => setActiveMisalignment("verbal")}
-              className={`p-6 w-full text-left transition-shadow bg-white rounded-xl hover:shadow-lg border ${
-                activeMisalignment === "verbal"
-                  ? "border-[#319AE0] ring-2 ring-[#319AE0]"
-                  : "border-gray-200"
-              }`}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-10 h-10 text-white bg-[#319AE0] rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">
-                    Verbal Comprehension Challenges
-                  </h4>
-                  <p className="mt-2 text-gray-600">
-                    Struggling with technical jargon and abstract terminology
-                    that creators assume as &quot;common knowledge&quot;
-                  </p>
-                </div>
-              </div>
-            </button>
-
-            {/* Working Memory */}
-            <button
-              type="button"
-              onClick={() => setActiveMisalignment("working")}
-              className={`p-6 w-full text-left transition-shadow bg-white rounded-xl hover:shadow-lg border ${
-                activeMisalignment === "working"
-                  ? "border-[#319AE0] ring-2 ring-[#319AE0]"
-                  : "border-gray-200"
-              }`}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-10 h-10 text-white bg-[#A6A62A] rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">
-                    Working Memory Constraints
-                  </h4>
-                  <p className="mt-2 text-gray-600">
-                    Overwhelmed by rapid pacing, high information density, and
-                    single-channel information delivery
-                  </p>
-                </div>
-              </div>
-            </button>
-
-            {/* Inferential Reasoning */}
-            <button
-              type="button"
-              onClick={() => setActiveMisalignment("inferential")}
-              className={`p-6 w-full text-left transition-shadow bg-white rounded-xl hover:shadow-lg border ${
-                activeMisalignment === "inferential"
-                  ? "border-[#319AE0] ring-2 ring-[#319AE0]"
-                  : "border-gray-200"
-              }`}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-10 h-10 text-white bg-[#3d7048] rounded-lg">
-                    <svg
-                      className="w-6 h-6"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">
-                    Inferential Reasoning Difficulties
-                  </h4>
-                  <p className="mt-2 text-gray-600">
-                    Challenges extracting information from dialogue, connecting
-                    omitted scenes, and interpreting visual symbols
-                  </p>
-                </div>
-              </div>
-            </button>
-          </div>
-
-          {/* Desktop: detail area controlled by selection */}
-          <div className="hidden mt-8 md:block">
-            {activeMisalignment === "spatial" && (
-              <div className="overflow-hidden bg-white shadow-lg rounded-xl">
-                <Image
-                  src="/images/CameraAngle_CamReady.png"
-                  alt="Spatial perception challenges with camera angles"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
-                <div className="p-4">
-                  <p className="text-sm text-center text-gray-600">
-                    Spatial perception challenges with rotated camera angles
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {activeMisalignment === "verbal" && (
-              <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
-                <p className="mb-2 text-sm font-semibold text-gray-900">
-                  Participant quote on verbal comprehension:
-                </p>
-                <p className="text-sm italic text-gray-700">
-                  &quot;Even when I replay the video, the difficult words still
-                  feel like a wall. I can hear them, but I can&apos;t really
-                  catch what they mean.&quot;
-                </p>
-              </div>
-            )}
-
-            {activeMisalignment === "working" && (
-              <div className="overflow-hidden bg-white shadow-lg rounded-xl">
-                <Image
-                  src="/images/SingleChannel_CamReady.png"
-                  alt="Working memory constraints and single-channel information delivery"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
-                <div className="p-4">
-                  <p className="text-sm text-center text-gray-600">
-                    Working memory constraints amplified by rapid, dense, and
-                    single-channel information delivery
-                  </p>
-                </div>
-              </div>
-            )}
-
-            {activeMisalignment === "inferential" && (
-              <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-lg">
-                <p className="mb-2 text-sm font-semibold text-gray-900">
-                  Example of inferential reasoning difficulty:
-                </p>
-                <p className="text-sm text-gray-700">
-                  When key steps are skipped or implied, participants struggle
-                  to fill in the gaps, making it difficult to connect scenes and
-                  understand how actions in the video lead to real-world
-                  outcomes.
-                </p>
-              </div>
-            )}
-          </div>
-
-          {/* Mobile: show each figure or quote directly under topic */}
-          <div className="mt-8 space-y-6 md:hidden">
-            <div className="overflow-hidden bg-white shadow-lg rounded-xl">
-              <Image
-                src="/images/CameraAngle_CamReady.png"
-                alt="Spatial perception challenges with camera angles"
-                width={800}
-                height={600}
-                className="w-full h-auto"
-              />
-              <div className="p-4">
-                <p className="text-sm font-semibold text-gray-900">
-                  Spatial Perception Misalignment
-                </p>
-                <p className="mt-1 text-sm text-gray-600">
-                  Difficulty translating 2D demonstrations into 3D actions,
-                  especially when camera angles are rotated.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white shadow-lg rounded-xl border border-gray-200">
-              <p className="text-sm font-semibold text-gray-900">
-                Verbal Comprehension Challenges
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                BIF users often face significant challenges translating
+                two-dimensional video demonstrations into three-dimensional
+                physical actions. Angled camera perspectives and device
+                rotations make spatial relationships difficult to discern
+                clearly.
               </p>
-              <p className="mt-2 text-sm italic text-gray-700">
-                &quot;Even when I replay the video, the difficult words still
-                feel like a wall. I can hear them, but I can&apos;t really
-                catch what they mean.&quot;
-              </p>
-            </div>
-
-            <div className="overflow-hidden bg-white shadow-lg rounded-xl">
-              <Image
-                src="/images/SingleChannel_CamReady.png"
-                alt="Working memory constraints and single-channel information delivery"
-                width={800}
-                height={600}
-                className="w-full h-auto"
-              />
-              <div className="p-4">
-                <p className="text-sm font-semibold text-gray-900">
-                  Working Memory Constraints
+              <blockquote className="border-l-4 border-[#3d7048] pl-4 py-2 bg-green-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;I can understand it in my head, but when I actually try
+                  to do it myself... my body just doesn&apos;t follow
+                  along.&quot;
                 </p>
-                <p className="mt-1 text-sm text-gray-600">
-                  Overwhelmed by rapid pacing and dense information packed into
-                  a single audio-visual channel.
-                </p>
-              </div>
-            </div>
-
-            <div className="p-6 bg-white shadow-lg rounded-xl border border-gray-200">
-              <p className="text-sm font-semibold text-gray-900">
-                Inferential Reasoning Difficulties
-              </p>
-              <p className="mt-2 text-sm text-gray-700">
-                Difficulty connecting omitted or implied steps in the video to
-                understand the full process and its real-world implications.
-              </p>
+              </blockquote>
             </div>
           </div>
-        </div>
 
-        {/* RQ2: Experiential Factors */}
-        <div className="mt-16">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-gray-900">
-              RQ2. Experiential Factors Amplifying Challenges
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Beyond cognitive challenges, accumulated life experiences create
-              additional barriers
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-              <h4 className="text-lg font-semibold text-gray-900">
-                Systemic Exclusion and Retreat to Video
-              </h4>
-              <p className="mt-3 text-sm text-gray-700">
-                Falling in a &quot;gray area&quot; between neurotypical
-                expectations and disability support systems, leading to social
-                isolation and dependence on video learning.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-              <h4 className="text-lg font-semibold text-gray-900">
-                The Trap of Uneven Abilities
-              </h4>
-              <p className="mt-3 text-sm text-gray-700">
-                Jagged cognitive profiles where competence in one area leads
-                observers to misinterpret struggles elsewhere as lack of
-                effort.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm">
-              <h4 className="text-lg font-semibold text-gray-900">
-                Negative Feedback Cycle and Low Self-Efficacy
-              </h4>
-              <p className="mt-3 text-sm text-gray-700">
-                Continuous negative feedback creating an internalized sense of
-                inadequacy and diminished confidence even when providing correct
-                answers.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* RQ3: Coping Strategies */}
-        <div className="mt-16">
-          <div className="mb-8">
-            <h3 className="text-2xl font-bold text-gray-900">
-              RQ3. Coping Strategies and Their Limitations
-            </h3>
-            <p className="mt-2 text-gray-600">
-              Current strategies employed by BIF users and why they fall short
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Seeking External Support */}
-            <div className="p-6 bg-white border border-gray-200 rounded-xl">
+          {/* Step 5: Mystery of Omitted Scene - Content Left, Image Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#8B4789]/30">
+            {/* Content - Left */}
+            <div className="px-8 py-8">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-10 h-10 text-white bg-[#4B8857] rounded-lg">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#8B4789] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-2">
+                  5
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-xl font-medium text-gray-900">
+                    The Mystery of the Omitted Scene
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1 font-light">
+                    Inferential Reasoning Capability Misalignment
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Informational videos frequently omit intermediate steps,
+                requiring viewers to make bridging inferences about causal
+                relationships. For concrete thinkers, these gaps create
+                comprehension barriers that repetition cannot overcome.
+              </p>
+              <blockquote className="border-l-4 border-[#8B4789] pl-4 py-2 bg-purple-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;We can&apos;t really figure out what the specific
+                  outcome is in the end... the story doesn&apos;t
+                  connect.&quot;
+                </p>
+              </blockquote>
+            </div>
+            {/* Image - Right */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-8">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
                   <svg
-                    className="w-6 h-6"
+                    className="w-16 h-16 mx-auto mb-2"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -711,26 +799,24 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
+                  <p className="text-sm font-medium">Film strip with gap</p>
+                  <p className="text-xs mt-1">4:3</p>
                 </div>
-                <h4 className="ml-3 text-lg font-semibold text-gray-900">
-                  Seeking External Support
-                </h4>
               </div>
-              <p className="text-sm text-gray-600 mb-3">
-                Participants readily seek help for technical issues but remain
-                silent about content comprehension challenges
-              </p>
             </div>
+          </div>
 
-            {/* Repetitive Viewing */}
-            <div className="p-6 bg-white border border-gray-200 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-10 h-10 text-white bg-[#319AE0] rounded-lg">
+          {/* Step 6: Brute-Force Replay - Image Left, Content Right */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#D97706]/30">
+            {/* Image - Left */}
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center p-8 md:order-1">
+              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                <div className="text-center text-gray-500">
                   <svg
-                    className="w-6 h-6"
+                    className="w-16 h-16 mx-auto mb-2"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -739,115 +825,218 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                     />
                   </svg>
+                  <p className="text-sm font-medium">
+                    Replay button vs dusty speed control
+                  </p>
+                  <p className="text-xs mt-1">4:3</p>
                 </div>
-                <h4 className="ml-3 text-lg font-semibold text-gray-900">
-                  Repetitive Viewing
-                </h4>
               </div>
-              <p className="text-sm text-gray-600 mb-3">
-                The most common strategy, with participants watching the same
-                content multiple times to grasp information
+            </div>
+            {/* Content - Right */}
+            <div className="px-8 py-8 md:order-2">
+              <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#D97706] text-white rounded-lg font-bold text-xl shadow-md transform rotate-1">
+                  6
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-xl font-medium text-gray-900">
+                    Brute-Force Replay vs. The Efficiency Paradox
+                  </h4>
+                  <p className="text-sm text-gray-600 mt-1 font-light">
+                    Coping Strategies: Repetitive Viewing & Speed Control
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                Users rely on repetitive viewing as a &apos;brute-force&apos;
+                coping mechanism, which often leads to mental and physical
+                fatigue without resolving the core barrier. Paradoxically, many
+                avoid slowing down playback speeds to maintain a sense of
+                normalcy and avoid the stigma of &apos;slowness&apos;.
               </p>
+              <blockquote className="border-l-4 border-[#D97706] pl-4 py-2 bg-orange-50 rounded-r">
+                <p className="text-base italic text-gray-700">
+                  &quot;There were many things I could not understand even after
+                  repeatedly replaying them. If you make it slower, it literally
+                  becomes slower and takes too much time, so I&apos;ve never
+                  used it.&quot;
+                </p>
+              </blockquote>
+            </div>
+          </div>
+
+          {/* Step 7: Shadow of Self-Doubt - Content Left, Image Right */}
+          <div className="relative">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#7C3AED]/30">
+              {/* Content - Left */}
+              <div className="px-8 py-8">
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-[#7C3AED] text-white rounded-lg font-bold text-xl shadow-md transform rotate-2">
+                    7
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-xl font-medium text-gray-900">
+                      The Shadow of Self-Doubt
+                    </h4>
+                    <p className="text-sm text-gray-600 mt-1 font-light">
+                      Negative Feedback Cycle and Internalized Inadequacy
+                    </p>
+                  </div>
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  Years of accumulated learning gaps and negative social feedback
+                  lead to low self-efficacy. This internalized self-doubt often
+                  overrides objective success, causing users to remain uncertain
+                  even when they provide correct answers.
+                </p>
+                <blockquote className="border-l-4 border-[#7C3AED] pl-4 py-2 bg-purple-50 rounded-r">
+                  <p className="text-base italic text-gray-700">
+                    &quot;While &apos;ordinary&apos; people can do it at that
+                    speed, I&apos;m quite lacking and slow in that. I lost track
+                    of it in my mind.&quot;
+                  </p>
+                </blockquote>
+              </div>
+              {/* Image - Right */}
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-8">
+                <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                  <div className="text-center text-gray-500">
+                    <svg
+                      className="w-16 h-16 mx-auto mb-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    <p className="text-sm font-medium">
+                      100/100 quiz, defeated reflection
+                    </p>
+                    <p className="text-xs mt-1">4:3</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Speed Control */}
-            <div className="p-6 bg-white border border-gray-200 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-10 h-10 text-white bg-[#A6A62A] rounded-lg">
+            {/* Deep Dive 2: Negative Feedback Cycle - Below Step 7 */}
+            <div className="mt-8">
+              <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-violet-50 rounded-2xl overflow-hidden border-2 border-purple-200 shadow-lg">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenDeepDive(
+                      openDeepDive === "feedback" ? null : "feedback"
+                    )
+                  }
+                  className="w-full px-6 py-6 flex items-center justify-between hover:bg-purple-100/50 transition-all group"
+                >
+                  <div className="flex items-center">
+                    <div className="relative">
+                      <span className="text-3xl mr-8 animate-pulse">💡</span>
+                      <svg className="absolute -top-1 -right-1 w-6 h-6 text-purple-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-lg font-bold text-purple-900">
+                        🔘 WHY IS THIS HAPPENING?
+                      </h4>
+                      <p className="text-base font-medium text-purple-800 mt-1">
+                        The Negative Feedback Cycle
+                      </p>
+                      <p className="text-sm text-purple-600 mt-1">
+                        {openDeepDive === "feedback" ? "Click to close" : "Click to explore →"}
+                      </p>
+                    </div>
+                  </div>
                   <svg
-                    className="w-6 h-6"
+                    className={`w-8 h-8 text-purple-600 transition-transform duration-300 group-hover:scale-110 ${
+                      openDeepDive === "feedback" ? "rotate-180" : ""
+                    }`}
                     fill="none"
                     stroke="currentColor"
+                    strokeWidth={3}
                     viewBox="0 0 24 24"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </div>
-                <h4 className="ml-3 text-lg font-semibold text-gray-900">
-                  Speed Control
-                </h4>
+                </button>
+                {openDeepDive === "feedback" && (
+                  <div className="bg-white/80 border-t-2 border-purple-200">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                      {/* Image placeholder */}
+                      <div className="bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-6 rounded-lg">
+                        <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
+                          <div className="text-center text-gray-500">
+                            <svg
+                              className="w-12 h-12 mx-auto mb-2"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                              />
+                            </svg>
+                            <p className="text-xs font-medium">Feedback cycle diagram</p>
+                          </div>
+                        </div>
+                      </div>
+                      {/* Content */}
+                      <div className="flex flex-col justify-center">
+                        <p className="text-gray-700 leading-relaxed text-base">
+                          BIF users often internalize universal design challenges—like
+                          rapid video pacing—as personal failures. This mindset erodes
+                          self-efficacy and fosters &apos;learned helplessness,&apos;
+                          where users become too afraid to utilize the very tools or
+                          strategies that might help them.
+                        </p>
+                        <div className="mt-4 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-r-lg">
+                          <p className="text-sm text-purple-800 italic">
+                            💭 This creates a vicious cycle: design barriers → internalized as personal failure →
+                            fear of using helpful tools → continued struggle → reinforced belief of inadequacy.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-              <p className="text-sm text-gray-600 mb-3">
-                Most participants avoid using playback speed controls despite
-                acknowledging comprehension difficulties
-              </p>
             </div>
-          </div>
-
-          {/* Limitations as separate connected boxes */}
-          <div className="grid gap-6 mt-8 md:grid-cols-3">
-            <div className="relative p-6 bg-[#FFF7F5] border border-red-100 rounded-xl">
-              <div className="flex items-center mb-3">
-                <span className="mr-2 text-lg text-red-500">↓</span>
-                <p className="text-sm font-semibold text-red-600">
-                  Limitation: Seeking External Support
-                </p>
-              </div>
-              <p className="text-sm text-gray-700">
-                Selective help-seeking only for surface-level problems;
-                asynchronous help-seeking deadlock in independent contexts.
-              </p>
-            </div>
-
-            <div className="relative p-6 bg-[#FFF7F5] border border-red-100 rounded-xl">
-              <div className="flex items-center mb-3">
-                <span className="mr-2 text-lg text-red-500">↓</span>
-                <p className="text-sm font-semibold text-red-600">
-                  Limitation: Repetitive Viewing
-                </p>
-              </div>
-              <p className="text-sm text-gray-700">
-                Causes mental and physical fatigue; users repeatedly encounter
-                the same barriers without resolution.
-              </p>
-            </div>
-
-            <div className="relative p-6 bg-[#FFF7F5] border border-red-100 rounded-xl">
-              <div className="flex items-center mb-3">
-                <span className="mr-2 text-lg text-red-500">↓</span>
-                <p className="text-sm font-semibold text-red-600">
-                  Limitation: Speed Control
-                </p>
-              </div>
-              <p className="text-sm text-gray-700">
-                Paradoxically refuse to slow down; slowing triggers feelings of
-                inadequacy and stigma.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-6 mt-8 bg-[#FFFCDF] border-l-4 border-[#A6A62A] rounded-r-xl">
-            <p className="text-sm font-semibold text-[#A6A62A] mb-2">
-              Knowledge Barrier
-            </p>
-            <p className="text-sm text-gray-700">
-              These coping strategies reveal a fundamental{" "}
-              <strong>
-                knowledge barrier between video creators and BIF viewers
-              </strong>
-              . While creators assume certain baseline understanding, BIF
-              users&apos; actual comprehension needs remain unmet, creating
-              accessibility gaps that cannot be overcome through individual
-              effort alone.
-            </p>
           </div>
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
       {/* Design Implications */}
       <section
         id="implications"
-        className="px-6 py-16 mx-auto max-w-7xl lg:px-8"
+        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl font-medium text-center text-gray-900">
           Design Implications
         </h2>
         <p className="mt-4 text-lg text-center text-gray-600">
@@ -856,8 +1045,8 @@ export default function Home() {
 
         <div className="grid gap-8 mt-12 lg:grid-cols-3">
           {/* Cognitive Load Reduction */}
-          <div className="p-8 bg-white border-t-4 border-[#4B8857] shadow-lg rounded-xl">
-            <h3 className="text-xl font-bold text-gray-900">
+          <div className="p-8 bg-white border-2 border-dashed border-[#4B8857]/30 shadow-lg rounded-xl">
+            <h3 className="text-xl font-medium text-gray-900">
               Cognitive Load Reduction
             </h3>
             <ul className="mt-4 space-y-3 text-gray-700">
@@ -877,8 +1066,8 @@ export default function Home() {
           </div>
 
           {/* Scaffolding */}
-          <div className="p-8 bg-white border-t-4 border-[#319AE0] shadow-lg rounded-xl">
-            <h3 className="text-xl font-bold text-gray-900">
+          <div className="p-8 bg-white border-2 border-dashed border-[#319AE0]/30 shadow-lg rounded-xl">
+            <h3 className="text-xl font-medium text-gray-900">
               Scaffolding & Progressive Disclosure
             </h3>
             <ul className="mt-4 space-y-3 text-gray-700">
@@ -898,8 +1087,8 @@ export default function Home() {
           </div>
 
           {/* Self-Efficacy */}
-          <div className="p-8 bg-white border-t-4 border-[#A6A62A] shadow-lg rounded-xl">
-            <h3 className="text-xl font-bold text-gray-900">
+          <div className="p-8 bg-white border-2 border-dashed border-[#A6A62A]/30 shadow-lg rounded-xl">
+            <h3 className="text-xl font-medium text-gray-900">
               Fostering Self-Efficacy
             </h3>
             <ul className="mt-4 space-y-3 text-gray-700">
@@ -954,7 +1143,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="h-12 w-auto flex items-center justify-center">
                 <Image
-                  src="/images/NUS_logo.png"
+                  src="/images/NUS_logo.jpg"
                   alt="National University of Singapore"
                   width={42}
                   height={42}
@@ -979,33 +1168,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
       {/* BibTeX Section */}
       <section
         id="bibtex"
-        className="px-6 py-16 mx-auto max-w-5xl lg:px-8 bg-gray-50"
+        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
       >
-        <h2 className="text-3xl font-bold text-center text-gray-900">
+        <h2 className="text-3xl font-medium text-center text-gray-900">
           Citation
         </h2>
-        <div className="p-6 mt-8 bg-gray-900 rounded-xl">
+        <div className="p-6 mt-8 bg-gray-900 rounded-2xl border-2 border-dashed border-gray-700">
           <div className="flex items-center justify-between mb-4">
-            <span className="text-sm font-medium text-gray-300">BibTeX</span>
+            <span className="text-base font-medium text-gray-300">BibTeX</span>
             <button
               type="button"
               onClick={handleCopyBibtex}
-              className="inline-flex items-center px-3 py-1.5 text-xs font-semibold text-gray-900 bg-white rounded-md shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="inline-flex items-center px-4 py-2 text-sm font-light text-gray-900 bg-white rounded-lg shadow-sm hover:shadow-md hover:bg-gray-100 transform hover:-translate-y-0.5 transition-all border-2 border-dashed border-gray-300"
             >
-              {hasCopiedBibtex ? "Copied!" : "Copy"}
+              {hasCopiedBibtex ? "✓ Copied!" : "📋 Copy"}
             </button>
           </div>
-          <pre className="text-sm text-gray-100 whitespace-pre-wrap break-words">
+          <pre className="text-sm text-gray-100 whitespace-pre-wrap break-words font-mono">
             {BIBTEX}
           </pre>
         </div>
       </section>
 
+      {/* Decorative Divider */}
+      <div className="relative py-4 mt-8">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          </svg>
+        </div>
+      </div>
+
       {/* Footer */}
-      <footer className="px-6 py-12 mx-auto mt-20 max-w-7xl lg:px-8 border-t border-gray-200">
+      <footer className="px-6 py-8 mx-auto max-w-7xl lg:px-8">
         <div className="text-center text-gray-600">
           <p className="mt-2 text-sm">
             Contact:{" "}
