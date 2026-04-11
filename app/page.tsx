@@ -297,7 +297,7 @@ export default function Home() {
           {/* Study 1 */}
           <div className="p-8 bg-white border-2 border-dashed border-[#4B8857]/30 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
-              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#4B8857] rounded-lg shadow-md transform rotate-2">
+              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#4B8857] rounded-lg shadow-md transform">
                 <span className="text-xl font-bold">1</span>
               </div>
               <h3 className="ml-4 text-xl font-medium text-gray-900">
@@ -323,7 +323,7 @@ export default function Home() {
           {/* Study 2 */}
           <div className="p-8 bg-white border-2 border-dashed border-[#319AE0]/30 rounded-xl shadow-md">
             <div className="flex items-center mb-4">
-              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#319AE0] rounded-lg shadow-md transform -rotate-1">
+              <div className="flex items-center justify-center w-12 h-12 text-white bg-[#319AE0] rounded-lg shadow-md transform">
                 <span className="text-xl font-bold">2</span>
               </div>
               <h3 className="ml-4 text-xl font-medium text-gray-900">
@@ -400,26 +400,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-2xl overflow-hidden border-2 border-dashed border-[#319AE0]/30">
             {/* Image - Left */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center p-8">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    Person with tablet in dimly lit room
-                  </p>
-                  <p className="text-xs mt-1">Aspect Ratio: 4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step0.png"
+                  alt="Key finding illustration for background"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
             {/* Content - Right */}
@@ -460,7 +448,7 @@ export default function Home() {
             {/* Content - Left */}
             <div className="px-8 py-8">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#4B8857] text-white rounded-lg font-bold text-xl shadow-md transform rotate-1">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#4B8857] text-white rounded-lg font-bold text-xl shadow-md transform">
                   1
                 </div>
                 <div className="ml-4">
@@ -488,26 +476,14 @@ export default function Home() {
             </div>
             {/* Image - Right */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center p-8">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    Words forming a wall barrier
-                  </p>
-                  <p className="text-xs mt-1">4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step1.png"
+                  alt="Key finding illustration for step 1: common sense language as a barrier"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -516,32 +492,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#319AE0]/30">
             {/* Image - Left */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-8 md:order-1">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    Clock spinning, speech bubbles piling
-                  </p>
-                  <p className="text-xs mt-1">4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step2.png"
+                  alt="Key finding illustration for step 2: video pacing ahead of the learner"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
             {/* Content - Right */}
             <div className="px-8 py-8 md:order-2">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#319AE0] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-1">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#319AE0] text-white rounded-lg font-bold text-xl shadow-md transform">
                   2
                 </div>
                 <div className="ml-4">
@@ -574,7 +538,7 @@ export default function Home() {
               {/* Content - Left */}
               <div className="px-8 py-8">
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-[#A6A62A] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-2">
+                  <div className="flex items-center justify-center w-12 h-12 bg-[#A6A62A] text-white rounded-lg font-bold text-xl shadow-md transform">
                     3
                   </div>
                   <div className="ml-4">
@@ -606,26 +570,14 @@ export default function Home() {
               </div>
               {/* Image - Right */}
               <div className="bg-gradient-to-br from-yellow-50 to-amber-50 flex items-center justify-center p-8">
-                <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                  <div className="text-center text-gray-500">
-                    <svg
-                      className="w-16 h-16 mx-auto mb-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <p className="text-sm font-medium">
-                      Speaker icon with/without captions
-                    </p>
-                    <p className="text-xs mt-1">4:3</p>
-                  </div>
+                <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                  <Image
+                    src="/images/keyfindings/step3.png"
+                    alt="Key finding illustration for step 3: multimodal anchors such as captions"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
@@ -642,18 +594,11 @@ export default function Home() {
                 >
                   <div className="flex items-center">
                     <div className="relative">
-                      <span className="text-3xl mr-8 animate-pulse">💡</span>
-                      <svg
-                        className="absolute -top-1 -right-1 w-6 h-6 text-amber-400 animate-bounce"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      <span className="text-3xl mr-6">💡</span>
                     </div>
                     <div className="text-left">
                       <h4 className="text-lg font-bold text-amber-900">
-                        🔘 WHY IS THIS HAPPENING?
+                        WHY IS THIS HAPPENING?
                       </h4>
                       <p className="text-base font-medium text-amber-800 mt-1">
                         The Trap of Uneven Abilities
@@ -686,25 +631,14 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                       {/* Image placeholder */}
                       <div className="bg-gradient-to-br from-amber-50 to-yellow-50 flex items-center justify-center p-6 rounded-lg">
-                        <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                          <div className="text-center text-gray-500">
-                            <svg
-                              className="w-12 h-12 mx-auto mb-2"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              />
-                            </svg>
-                            <p className="text-xs font-medium">
-                              Jagged profile visualization
-                            </p>
-                          </div>
+                        <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                          <Image
+                            src="/images/keyfindings/deepdive%201.png"
+                            alt="Deep dive illustration: uneven abilities and a jagged cognitive profile"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                       </div>
                       {/* Content */}
@@ -737,32 +671,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#3d7048]/30">
             {/* Image - Left */}
             <div className="bg-gradient-to-br from-green-50 to-teal-50 flex items-center justify-center p-8 md:order-1">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    2D paper on 3D mannequin confusion
-                  </p>
-                  <p className="text-xs mt-1">4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step4.png"
+                  alt="Key finding illustration for step 4: 2D video versus 3D spatial understanding"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
             {/* Content - Right */}
             <div className="px-8 py-8 md:order-2">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#3d7048] text-white rounded-lg font-bold text-xl shadow-md transform rotate-2">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#3d7048] text-white rounded-lg font-bold text-xl shadow-md transform">
                   4
                 </div>
                 <div className="ml-4">
@@ -796,7 +718,7 @@ export default function Home() {
             {/* Content - Left */}
             <div className="px-8 py-8">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#8B4789] text-white rounded-lg font-bold text-xl shadow-md transform -rotate-2">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#8B4789] text-white rounded-lg font-bold text-xl shadow-md transform">
                   5
                 </div>
                 <div className="ml-4">
@@ -823,24 +745,14 @@ export default function Home() {
             </div>
             {/* Image - Right */}
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-8">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">Film strip with gap</p>
-                  <p className="text-xs mt-1">4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step5.png"
+                  alt="Key finding illustration for step 5: omitted scenes and broken causal chains"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -849,32 +761,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-lg rounded-xl overflow-hidden border-2 border-dashed border-[#D97706]/30">
             {/* Image - Left */}
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 flex items-center justify-center p-8 md:order-1">
-              <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                <div className="text-center text-gray-500">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p className="text-sm font-medium">
-                    Replay button vs dusty speed control
-                  </p>
-                  <p className="text-xs mt-1">4:3</p>
-                </div>
+              <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                <Image
+                  src="/images/keyfindings/step6.png"
+                  alt="Key finding illustration for step 6: replay and playback speed coping strategies"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
             </div>
             {/* Content - Right */}
             <div className="px-8 py-8 md:order-2">
               <div className="flex items-center mb-4">
-                <div className="flex items-center justify-center w-12 h-12 bg-[#D97706] text-white rounded-lg font-bold text-xl shadow-md transform rotate-1">
+                <div className="flex items-center justify-center w-12 h-12 bg-[#D97706] text-white rounded-lg font-bold text-xl shadow-md transform">
                   6
                 </div>
                 <div className="ml-4">
@@ -910,7 +810,7 @@ export default function Home() {
               {/* Content - Left */}
               <div className="px-8 py-8">
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center justify-center w-12 h-12 bg-[#7C3AED] text-white rounded-lg font-bold text-xl shadow-md transform rotate-2">
+                  <div className="flex items-center justify-center w-12 h-12 bg-[#7C3AED] text-white rounded-lg font-bold text-xl shadow-md transform">
                     7
                   </div>
                   <div className="ml-4">
@@ -923,10 +823,13 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Years of accumulated learning gaps and negative social
-                  feedback lead to low self-efficacy. This internalized
-                  self-doubt often overrides objective success, causing users to
-                  remain uncertain even when they provide correct answers.
+                  By the end of the session, participants often provide correct
+                  answers but suffer from an internalized self-doubt that
+                  overrides objective success. For example, even after selecting
+                  the right options, a participant might rate their confidence
+                  as only 40% to 60%. This reflects years of accumulated
+                  learning gaps and continuous negative feedback that erode
+                  self-efficacy.
                 </p>
                 <blockquote className="border-l-4 border-[#7C3AED] pl-4 py-2 bg-purple-50 rounded-r">
                   <p className="text-base italic text-gray-700">
@@ -938,26 +841,14 @@ export default function Home() {
               </div>
               {/* Image - Right */}
               <div className="bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-8">
-                <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                  <div className="text-center text-gray-500">
-                    <svg
-                      className="w-16 h-16 mx-auto mb-2"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <p className="text-sm font-medium">
-                      100/100 quiz, defeated reflection
-                    </p>
-                    <p className="text-xs mt-1">4:3</p>
-                  </div>
+                <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                  <Image
+                    src="/images/keyfindings/step7.png"
+                    alt="Key finding illustration for step 7: self-doubt and confidence despite correct answers"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
               </div>
             </div>
@@ -976,18 +867,11 @@ export default function Home() {
                 >
                   <div className="flex items-center">
                     <div className="relative">
-                      <span className="text-3xl mr-8 animate-pulse">💡</span>
-                      <svg
-                        className="absolute -top-1 -right-1 w-6 h-6 text-purple-400 animate-bounce"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      <span className="text-3xl mr-6">💡</span>
                     </div>
                     <div className="text-left">
                       <h4 className="text-lg font-bold text-purple-900">
-                        🔘 WHY IS THIS HAPPENING?
+                        WHY IS THIS HAPPENING?
                       </h4>
                       <p className="text-base font-medium text-purple-800 mt-1">
                         The Negative Feedback Cycle
@@ -1020,25 +904,14 @@ export default function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                       {/* Image placeholder */}
                       <div className="bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-6 rounded-lg">
-                        <div className="w-full aspect-[4/3] bg-white rounded-lg shadow-inner flex items-center justify-center border-2 border-dashed border-gray-300">
-                          <div className="text-center text-gray-500">
-                            <svg
-                              className="w-12 h-12 mx-auto mb-2"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                              />
-                            </svg>
-                            <p className="text-xs font-medium">
-                              Feedback cycle diagram
-                            </p>
-                          </div>
+                        <div className="relative w-full aspect-[4/3] bg-white rounded-lg overflow-hidden border-2 border-dashed border-gray-300">
+                          <Image
+                            src="/images/keyfindings/deepdive%202.png"
+                            alt="Deep dive illustration: negative feedback cycle and internalized struggle"
+                            fill
+                            className="object-contain"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
                         </div>
                       </div>
                       {/* Content */}
