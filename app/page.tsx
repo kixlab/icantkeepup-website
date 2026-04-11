@@ -204,17 +204,25 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 2, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
 
       {/* Abstract Section */}
-      <section
-        id="abstract"
-        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
-      >
+      <section id="abstract" className="px-6 py-12 mx-auto max-w-7xl lg:px-8">
         <div className="overflow-hidden bg-white shadow-lg rounded-2xl border-2 border-dashed border-gray-300">
           <div className="px-8 py-12">
             <h2 className="text-3xl font-medium text-gray-900">Abstract</h2>
@@ -238,7 +246,7 @@ export default function Home() {
                   elements
                 </strong>{" "}
                 (e.g., overwhelmed by pacing and density, difficulty inferring
-                omitted content), and{" "} <strong>experiential factors</strong>{" "}
+                omitted content), and <strong>experiential factors</strong>{" "}
                 intensifying challenges (e.g., low self-efficacy).
               </p>
               <p>
@@ -256,8 +264,19 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 18, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
@@ -345,17 +364,25 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 2, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
 
       {/* Key Findings Section - Journey-Based */}
-      <section
-        id="findings"
-        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
-      >
+      <section id="findings" className="px-6 py-12 mx-auto max-w-7xl lg:px-8">
         <h2 className="text-3xl font-medium text-center text-gray-900">
           Key Findings
         </h2>
@@ -364,7 +391,8 @@ export default function Home() {
           step
         </p>
         <p className="mt-2 text-base text-center text-gray-500 italic">
-          This journey represents a composite scenario synthesized from observations of multiple BIF individuals
+          This journey represents a composite scenario synthesized from
+          observations of multiple BIF individuals
         </p>
 
         {/* Background Section - 2 Column Grid */}
@@ -414,8 +442,7 @@ export default function Home() {
               </p>
               <blockquote className="border-l-4 border-[#319AE0] pl-4 py-2 bg-blue-50 rounded-r">
                 <p className="text-base italic text-gray-700">
-                  &quot;There aren&apos;t many people who can wait for
-                  us.&quot;
+                  &quot;There aren&apos;t many people who can wait for us.&quot;
                 </p>
               </blockquote>
             </div>
@@ -562,16 +589,18 @@ export default function Home() {
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   Content presented through only one modality (audio-only or
-                  visual-only) often fails to be processed. However, when audio is
-                  paired with visual anchors like captions, comprehension improves
-                  dramatically as the redundant channels reduce cognitive load.
+                  visual-only) often fails to be processed. However, when audio
+                  is paired with visual anchors like captions, comprehension
+                  improves dramatically as the redundant channels reduce
+                  cognitive load.
                 </p>
                 <blockquote className="border-l-4 border-[#A6A62A] pl-4 py-2 bg-yellow-50 rounded-r">
                   <p className="text-base italic text-gray-700">
                     &quot;I didn&apos;t hear it... I thought the sound from the
                     machine was the narrator&apos;s voice. It was subtitles... I
                     feel like I need something like a caption or a highlight to
-                    emphasize that &apos;this is important right now&apos;.&quot;
+                    emphasize that &apos;this is important right
+                    now&apos;.&quot;
                   </p>
                 </blockquote>
               </div>
@@ -607,16 +636,18 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() =>
-                    setOpenDeepDive(
-                      openDeepDive === "uneven" ? null : "uneven"
-                    )
+                    setOpenDeepDive(openDeepDive === "uneven" ? null : "uneven")
                   }
                   className="w-full px-6 py-6 flex items-center justify-between hover:bg-amber-100/50 transition-all group"
                 >
                   <div className="flex items-center">
                     <div className="relative">
                       <span className="text-3xl mr-8 animate-pulse">💡</span>
-                      <svg className="absolute -top-1 -right-1 w-6 h-6 text-amber-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="absolute -top-1 -right-1 w-6 h-6 text-amber-400 animate-bounce"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
@@ -628,7 +659,9 @@ export default function Home() {
                         The Trap of Uneven Abilities
                       </p>
                       <p className="text-sm text-amber-600 mt-1">
-                        {openDeepDive === "uneven" ? "Click to close" : "Click to explore →"}
+                        {openDeepDive === "uneven"
+                          ? "Click to close"
+                          : "Click to explore →"}
                       </p>
                     </div>
                   </div>
@@ -668,7 +701,9 @@ export default function Home() {
                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                               />
                             </svg>
-                            <p className="text-xs font-medium">Jagged profile visualization</p>
+                            <p className="text-xs font-medium">
+                              Jagged profile visualization
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -676,16 +711,18 @@ export default function Home() {
                       <div className="flex flex-col justify-center">
                         <p className="text-gray-700 leading-relaxed text-base">
                           BIF individuals often have a &apos;jagged cognitive
-                          profile&apos; with significant intra-individual variance.
-                          For example, they may perform &apos;above normal&apos; in
-                          humanities while struggling deeply with spatial or numerical
-                          tasks. This inconsistency often leads observers to
-                          misinterpret their genuine struggles as a lack of effort.
+                          profile&apos; with significant intra-individual
+                          variance. For example, they may perform &apos;above
+                          normal&apos; in humanities while struggling deeply
+                          with spatial or numerical tasks. This inconsistency
+                          often leads observers to misinterpret their genuine
+                          struggles as a lack of effort.
                         </p>
                         <div className="mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
                           <p className="text-sm text-amber-800 italic">
-                            💭 This creates a paradox: their visible competence in some areas
-                            makes their invisible struggles in others seem like &quot;not trying hard enough.&quot;
+                            💭 This creates a paradox: their visible competence
+                            in some areas makes their invisible struggles in
+                            others seem like &quot;not trying hard enough.&quot;
                           </p>
                         </div>
                       </div>
@@ -780,8 +817,7 @@ export default function Home() {
               <blockquote className="border-l-4 border-[#8B4789] pl-4 py-2 bg-purple-50 rounded-r">
                 <p className="text-base italic text-gray-700">
                   &quot;We can&apos;t really figure out what the specific
-                  outcome is in the end... the story doesn&apos;t
-                  connect.&quot;
+                  outcome is in the end... the story doesn&apos;t connect.&quot;
                 </p>
               </blockquote>
             </div>
@@ -887,10 +923,10 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Years of accumulated learning gaps and negative social feedback
-                  lead to low self-efficacy. This internalized self-doubt often
-                  overrides objective success, causing users to remain uncertain
-                  even when they provide correct answers.
+                  Years of accumulated learning gaps and negative social
+                  feedback lead to low self-efficacy. This internalized
+                  self-doubt often overrides objective success, causing users to
+                  remain uncertain even when they provide correct answers.
                 </p>
                 <blockquote className="border-l-4 border-[#7C3AED] pl-4 py-2 bg-purple-50 rounded-r">
                   <p className="text-base italic text-gray-700">
@@ -933,7 +969,7 @@ export default function Home() {
                   type="button"
                   onClick={() =>
                     setOpenDeepDive(
-                      openDeepDive === "feedback" ? null : "feedback"
+                      openDeepDive === "feedback" ? null : "feedback",
                     )
                   }
                   className="w-full px-6 py-6 flex items-center justify-between hover:bg-purple-100/50 transition-all group"
@@ -941,7 +977,11 @@ export default function Home() {
                   <div className="flex items-center">
                     <div className="relative">
                       <span className="text-3xl mr-8 animate-pulse">💡</span>
-                      <svg className="absolute -top-1 -right-1 w-6 h-6 text-purple-400 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="absolute -top-1 -right-1 w-6 h-6 text-purple-400 animate-bounce"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
@@ -953,7 +993,9 @@ export default function Home() {
                         The Negative Feedback Cycle
                       </p>
                       <p className="text-sm text-purple-600 mt-1">
-                        {openDeepDive === "feedback" ? "Click to close" : "Click to explore →"}
+                        {openDeepDive === "feedback"
+                          ? "Click to close"
+                          : "Click to explore →"}
                       </p>
                     </div>
                   </div>
@@ -993,23 +1035,28 @@ export default function Home() {
                                 d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
                               />
                             </svg>
-                            <p className="text-xs font-medium">Feedback cycle diagram</p>
+                            <p className="text-xs font-medium">
+                              Feedback cycle diagram
+                            </p>
                           </div>
                         </div>
                       </div>
                       {/* Content */}
                       <div className="flex flex-col justify-center">
                         <p className="text-gray-700 leading-relaxed text-base">
-                          BIF users often internalize universal design challenges—like
-                          rapid video pacing—as personal failures. This mindset erodes
-                          self-efficacy and fosters &apos;learned helplessness,&apos;
-                          where users become too afraid to utilize the very tools or
+                          BIF users often internalize universal design
+                          challenges—like rapid video pacing—as personal
+                          failures. This mindset erodes self-efficacy and
+                          fosters &apos;learned helplessness,&apos; where users
+                          become too afraid to utilize the very tools or
                           strategies that might help them.
                         </p>
                         <div className="mt-4 p-4 bg-purple-50 border-l-4 border-purple-400 rounded-r-lg">
                           <p className="text-sm text-purple-800 italic">
-                            💭 This creates a vicious cycle: design barriers → internalized as personal failure →
-                            fear of using helpful tools → continued struggle → reinforced belief of inadequacy.
+                            💭 This creates a vicious cycle: design barriers →
+                            internalized as personal failure → fear of using
+                            helpful tools → continued struggle → reinforced
+                            belief of inadequacy.
                           </p>
                         </div>
                       </div>
@@ -1025,8 +1072,19 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 18, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
@@ -1171,17 +1229,25 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 2, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 2, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
 
       {/* BibTeX Section */}
-      <section
-        id="bibtex"
-        className="px-6 py-12 mx-auto max-w-7xl lg:px-8"
-      >
+      <section id="bibtex" className="px-6 py-12 mx-auto max-w-7xl lg:px-8">
         <h2 className="text-3xl font-medium text-center text-gray-900">
           Citation
         </h2>
@@ -1205,8 +1271,19 @@ export default function Home() {
       {/* Decorative Divider */}
       <div className="relative py-4 mt-8">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <svg className="w-full h-4" viewBox="0 0 1200 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 10 Q 300 18, 600 10 T 1200 10" stroke="#E5E7EB" strokeWidth="3" strokeDasharray="10,5" strokeLinecap="round"/>
+          <svg
+            className="w-full h-4"
+            viewBox="0 0 1200 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 10 Q 300 18, 600 10 T 1200 10"
+              stroke="#E5E7EB"
+              strokeWidth="3"
+              strokeDasharray="10,5"
+              strokeLinecap="round"
+            />
           </svg>
         </div>
       </div>
