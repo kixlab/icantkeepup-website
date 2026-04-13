@@ -177,8 +177,23 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex items-center justify-center mt-12 gap-x-6">
             <a
-              href="https://arxiv.org/abs/2602.08300"
+              href="https://doi.org/10.1145/3772318.3790458"
               className="flex items-center gap-2 rounded-xl bg-[#319AE0] px-6 py-3 text-sm font-light text-white shadow-md hover:shadow-lg hover:bg-[#2a86c9] transform hover:-translate-y-0.5 transition-all border-2 border-dashed border-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/acm_logo.png"
+                alt="ACM publication"
+                width={20}
+                height={20}
+                className="w-5 h-5 object-contain"
+              />
+              Read Paper
+            </a>
+            <a
+              href="https://arxiv.org/abs/2602.08300"
+              className="flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-light text-gray-800 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all border-2 border-dashed border-gray-400"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -189,7 +204,7 @@ export default function Home() {
                 height={20}
                 className="w-5 h-5 object-contain"
               />
-              Read Paper
+              Preprint
             </a>
             <a
               href="#bibtex"
@@ -413,7 +428,7 @@ export default function Home() {
             {/* Content - Right */}
             <div className="px-8 py-10">
               <div className="flex items-center mb-4">
-                <span className="text-2xl mr-3">🛡️</span>
+                <span className="text-2xl mr-3">✨</span>
                 <h3 className="text-2xl font-medium text-gray-900">
                   Background: The Retreat to Video as a Social Refuge
                 </h3>
@@ -1074,7 +1089,7 @@ export default function Home() {
             <div className="flex flex-col items-center">
               <div className="h-12 w-auto flex items-center justify-center">
                 <Image
-                  src="/images/NUS_logo.jpg"
+                  src="/images/NUS_logo.png"
                   alt="National University of Singapore"
                   width={42}
                   height={42}
